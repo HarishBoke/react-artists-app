@@ -1,0 +1,20 @@
+body {
+    margin:0
+}
+header {
+    background:#3ab;
+    text-align: center;
+}
+.logo {
+    font-size: 40px;
+    font-family: cursive;
+}
+header input {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.news_item {
+    padding:20px;
+    border-bottom: 1px solid #999;
+    box-sizing: border-box;
+}
