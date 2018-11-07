@@ -1,24 +1,100 @@
 body {
     margin:0
 }
-header {
-    background:#3ab;
-    text-align: center;
-}
-.logo {
-    font-size: 40px;
-    font-family: cursive;
-}
-header input {
-    font-size: 20px;
-    margin: 20px 0;
-}
 .news_item, .post_item {
     padding:20px;
     border-bottom: 1px solid #999;
     box-sizing: border-box;
 }
 
+
+/* =======================================
+                    BANNER
+==========================================*/
+
+.banner .main_cover {
+    background:url('../images/cover.png');
+    height:400px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 465px;
+}
+
+.banner .logo {
+    font-family: 'Monoton', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 62px;
+    color: #FFF;
+    font-size: 43px;
+    text-align: center;
+}
+
+.banner span {
+    display: block;
+    height: 20px;
+    background: #2196F3;
+}
+
+/* =======================================
+                ARTISTS LIST
+==========================================*/
+
+
+.artists_list {
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+.artists_list .artist_item {
+    display: block;
+    height: 290px;
+    background-size: cover!important;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.artists_list .artist_item div{
+    background: #2196F3;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.artists_list h4 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    margin: 20px 0px;
+}
+
+
+
+/* =======================================
+                    HEADER
+==========================================*/
+
+header {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    font-size: 33px;
+    border-bottom: 1px solid #2196F3;
+    background:#3ab;
+}
+.logo {
+    font-size: 40px;
+    font-family: cursive;
+    color:#fff;
+}
+header input {
+    font-size: 20px;
+    margin: 20px 0;
+}
 .header-navigation li {
     list-style: none;
     display: inline-block;
@@ -33,6 +109,64 @@ header input {
     display: inline-block;
     margin-bottom: 10px;
 }
+.header-navigation li a.selected {
+    text-decoration: underline;
+}
 .header-navigation li:last-child a {
     border-right: none;
+}
+
+/* =======================================
+                ARTISTS BIO
+==========================================*/
+
+.artist_bio{
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+.artist_bio .avatar span {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+    background-size: contain !important;
+}
+
+.artist_bio h3 {
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0px
+}
+
+.artist_bio .bio_text {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+
+.albums_list {
+    margin: 20px;
+}
+
+.albums_list:after {
+    clear: both;
+    display: table;
+    content:''
+}
+
+.albums_list > img {
+    float: left;
+    width:50%;
+}
+
+
+
+.example-appear {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
 }

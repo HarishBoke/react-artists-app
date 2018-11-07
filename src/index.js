@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 //route 
-import { BrowserRouter, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Route, NavLink} from 'react-router-dom';
 
 
 //COMPONETS
-import Header from './components/header';
-import NewsList from './components/news_list';
-import Posts from './components/posts';
-import PostsItem from './components/posts_item';
-import Profile from './components/profile';
+import Header from './components/shared/header';
+import NewsList from './components/news/news_list';
 
+import Posts from './components/posts/posts';
+import PostsItem from './components/posts/posts_item';
+
+import Profile from './components/profile/profile';
+
+import Artist from './components/artist/artist'
+import ArtistItem from './components/artist/artist_item';
 // Temp JSON DB
 import JSON from './db.json';
 
@@ -66,15 +70,18 @@ ReactDOM.render(
     {/* <Header newsSearch={(keywords) => this.filterNews(keywords)} />  NOTE: once scope issue solve can add here as result search doesn't find scope  */}
 
                         <ul className="header-navigation">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/posts">Posts</Link></li>
-                            <li><Link to="/profile">Profile</Link></li>
+                            <li><NavLink exact to="/" activeClassName="selected">Home</NavLink></li>
+                            <li><NavLink to="/posts" activeClassName="selected">Posts</NavLink></li>
+                            <li><NavLink to="/profile" activeClassName="selected">Profile</NavLink></li>
+                            <li><NavLink to="/artist" activeClassName="selected">Artist</NavLink></li>
                         </ul>
                         
         <Route exact path="/" component={App}></Route>
         {/* <Route exact path="/" component={AppWithRouting}></Route> */}
         <Route exact path="/posts" component={Posts}></Route>
         <Route path="/posts/:id" component={PostsItem}></Route>
+        <Route path="/artist" component={Artist}></Route>
+        <Route path="/artist/:artistId" component={ArtistItem}></Route>
         <Route path="/profile" component={Profile}></Route>
     </div>
     </BrowserRouter>, document.getElementById("root"));
