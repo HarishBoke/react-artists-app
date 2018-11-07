@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+//import {Link} from 'react-router-dom';
 // internal style with JS
 // Functional component
 // const Header = () => {
@@ -16,7 +16,7 @@ class Header extends Component{
             //title: 'The keyword values are: ',
             keywords: ''
          }
-         console.log(props);
+         //console.log(props);
     }
     
     inputChange(e){
@@ -50,6 +50,12 @@ class Header extends Component{
                 <input onChange={this.inputChange.bind(this)} /> 
                 {/* <div>{this.state.title}</div>
                 <div>{this.state.keywords}</div> */}
+
+                        {/* once scope issue from route solved can be used here <ul class="header-navigation">
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/posts">Posts</Link></li>
+                            <li><Link to="/profile">Profile</Link></li>
+                        </ul> */}
             </header>
         )
     }

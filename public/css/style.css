@@ -13,8 +13,26 @@ header input {
     font-size: 20px;
     margin: 20px 0;
 }
-.news_item {
+.news_item, .post_item {
     padding:20px;
     border-bottom: 1px solid #999;
     box-sizing: border-box;
+}
+
+.header-navigation li {
+    list-style: none;
+    display: inline-block;
+}
+.header-navigation li a {
+    color: #00acbe;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-right:1px solid #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.header-navigation li:last-child a {
+    border-right: none;
 }
