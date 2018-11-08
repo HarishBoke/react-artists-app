@@ -14,7 +14,7 @@ import PostsItem from './components/posts/posts_item';
 import Profile from './components/profile/profile';
 
 import Artist from './components/artist/artist'
-import ArtistItem from './components/artist/artist_item';
+import ArtistDetails from './components/artist/details/artist_details';
 // Temp JSON DB
 import JSON from './db.json';
 
@@ -80,8 +80,8 @@ ReactDOM.render(
         {/* <Route exact path="/" component={AppWithRouting}></Route> */}
         <Route exact path="/posts" component={Posts}></Route>
         <Route path="/posts/:id" component={PostsItem}></Route>
-        <Route path="/artist" component={Artist}></Route>
-        <Route path="/artist/:artistId" component={ArtistItem}></Route>
+        <Route exact path="/artist" component={Artist}></Route>
+        <Route path="/artist/:artistId" component={ArtistDetails}></Route>
         <Route path="/profile" component={Profile}></Route>
     </div>
     </BrowserRouter>, document.getElementById("root"));
